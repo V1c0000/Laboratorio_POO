@@ -1,0 +1,5 @@
+1,Estudiar Java,Pendiente
+2,Completar laboratorio,Pendiente
+3,Revisar colecciones,Pendiente
+4,Implementar Threads,Pendiente
+5,Documentar proyecto,Pendiente

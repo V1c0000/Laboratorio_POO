@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================
+     pom.xml — Archivo de configuración de Maven
+     ============================================================
+     Maven es la herramienta de construcción más usada en Java.
+     Este archivo le dice a Maven (y a los IDEs):
+       - Nombre y versión del proyecto
+       - Versión de Java a usar
+       - Cómo compilar y ejecutar
+
+     Para abrir el proyecto:
+       IntelliJ IDEA: File → Open → selecciona la carpeta ProyectoTareas
+       Eclipse:       File → Import → Maven → Existing Maven Projects
+       VS Code:       File → Open Folder → selecciona ProyectoTareas
+                      (necesitas la extensión "Extension Pack for Java")
+     ============================================================ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identificadores del proyecto -->
+    <groupId>mx.edu.universidad</groupId>
+    <artifactId>ProyectoTareas</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Mini Gestor de Tareas</name>
+    <description>
+        Práctica 10 — POO + Colecciones + I/O + Threads en Java
+    </description>
+
+    <properties>
+        <!-- Usamos Java 11 (compatible con Java 8, 17 y 21 también) -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <!-- Codificación UTF-8 para caracteres especiales (tildes, ñ) -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Plugin para ejecutar con: mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <!-- Clase que tiene el método main() -->
+                    <mainClass>Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
